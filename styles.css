@@ -1,0 +1,119 @@
+:root {
+  --magic-blue: #0b1c2d;
+  --magic-purple: #5f4b8b;
+  --magic-gold: #ffd966;
+  --soft-white: #fdfdfd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Baloo 2', cursive;
+  background: radial-gradient(circle at top, #132743, #050b14);
+  color: var(--soft-white);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ✨ HERO */
+.hero {
+  text-align: center;
+  padding: 6rem 1rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.2),
+    rgba(0,0,0,0.6)
+  );
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: var(--magic-gold);
+  text-shadow: 0 0 15px rgba(255,217,102,0.6);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+.magic-btn {
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  border: none;
+  font-size: 1.1rem;
+  background: linear-gradient(45deg, var(--magic-purple), var(--magic-gold));
+  color: #000;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.magic-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255,217,102,0.8);
+}
+
+/* 🏰 CONTENT */
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 3rem 1rem;
+}
+
+.card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 30px rgba(0,0,0,0.4);
+}
+
+.card h2 {
+  color: var(--magic-gold);
+  margin-bottom: 1rem;
+}
+
+/* ✨ FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* ✨ SPARKLES */
+.sparkles::before,
+.sparkles::after {
+  content: "✨";
+  position: fixed;
+  font-size: 1.5rem;
+  animation: sparkle 8s linear infinite;
+  opacity: 0.8;
+}
+
+.sparkles::after {
+  animation-delay: 4s;
+  left: 70%;
+}
+
+@keyframes sparkle {
+  0% {
+    top: 110%;
+    left: 20%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    top: -10%;
+    left: 80%;
+    opacity: 0;
+  }
+}

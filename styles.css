@@ -128,7 +128,7 @@ footer {
       rgba(5, 11, 20, 0.75),
       rgba(5, 11, 20, 0.85)
     ),
-    url("images/castle-bg.png") center bottom / cover no-repeat;
+    url("castle-bg.png") center bottom / cover no-repeat;
   z-index: -1;
   opacity: 0.35; /* ← controls translucency */
 }body::after {
